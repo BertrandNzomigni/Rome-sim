@@ -57,7 +57,10 @@ class Sim:
                 ennemy = choice(self.is_at_war_with)
                 self.log(f"{self.roman_soldiers} romans soldiers and {self.socii_soldiers} socii soldiers faces {self.country_info[ennemy]["army size"]} soldiers from {ennemy}")
 
-                attacker = choice(["Rome",ennemy])
+
+                i = randint(0,1)
+                attacker = ["Rome",ennemy][i]
+                defender = ["Rome",ennemy][i-1]
                 self.log(f"{attacker} is the attacker.")
 
                 ## Battle
@@ -99,6 +102,9 @@ class Sim:
                     self.pro_war_influence = min(100,self.pro_war_influence + 5)
                     self.log("The pro-war faction have an influence of "+str(self.pro_war_influence)+"%.")
 
+                    if attacker == "Rome":
+                        self.log(f"Rome besieges a city of {defender}.")
+
                     self.log("The roman army lost "+str(cumulative_roman_losses)+" soldiers in this battle.")
 
                     if self.war_progression >= 100:
@@ -118,7 +124,8 @@ class Sim:
                     if self.country_info[ennemy]["army size"] == 0:
                         self.log(f"{ennemy} was destroyed by Rome.")
                         self.country_info.pop(ennemy)
-                        self.is_at_war_with.remove(ennemy)
+                        if ennemy in self.is_at_war_with:
+                            self.is_at_war_with.remove(ennemy)
 
                         
                 else:
@@ -129,6 +136,9 @@ class Sim:
                     self.log("The pro-war faction have an influence of "+str(self.pro_war_influence)+"%.")
 
                     self.log("The roman army lost "+str(cumulative_roman_losses)+" soldiers in this battle.")
+
+                    if attacker == ennemy:
+                        self.log(f"{ennemy} besieges a city of Rome.")
 
                     if self.war_progression <= -100:
                         self.roman_republic_size = max(self.roman_republic_size-4,0)

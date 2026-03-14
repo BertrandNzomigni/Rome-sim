@@ -22,3 +22,5 @@
 - Les ennemis peuvent être détruits. (Fait)
 - Les samnites ont un avantage défensif lorsqu'ils sont attaqués. (Fait)
 - Il peut avoir plusieurs batailles par année. (Fait)
+- Si une armée offensive gagne une bataille, elle peut tenter un siège.
+    
