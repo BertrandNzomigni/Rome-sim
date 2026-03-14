@@ -163,6 +163,13 @@ class Sim:
                 self.roman_soldiers += 200
                 self.log("The roman republic have "+str(self.roman_soldiers)+" soldiers (without socii).")
 
+            for country in self.country_info.keys():
+                if randint(0,100) < 30:
+                    self.log(f"200 new soldiers joins the army of {country}.")
+                    self.country_info[country]["army size"] += 200
+                    self.log(f"{country} have {self.country_info[country]["army size"]} soldiers.")
+
+
             self.year -= 1
 
 s = Sim()
