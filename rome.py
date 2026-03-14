@@ -52,100 +52,101 @@ class Sim:
         
     def run(self):
         while self.year > self.beginning_year - self.duration and self.roman_republic_exist:
-            for ennemy in self.is_at_war_with:
-                if self.roman_soldiers + self.socii_soldiers > 0: 
-                    self.log(f"{self.roman_soldiers} romans soldiers and {self.socii_soldiers} socii soldiers faces {self.country_info[ennemy]["army size"]} soldiers from {ennemy}")
+            
+            while randint(0,100) < 75 and self.roman_soldiers + self.socii_soldiers > 0 and len(self.is_at_war_with) > 0:
+                ennemy = choice(self.is_at_war_with)
+                self.log(f"{self.roman_soldiers} romans soldiers and {self.socii_soldiers} socii soldiers faces {self.country_info[ennemy]["army size"]} soldiers from {ennemy}")
 
-                    attacker = choice(["Rome",ennemy])
-                    self.log(f"{attacker} is the attacker.")
+                attacker = choice(["Rome",ennemy])
+                self.log(f"{attacker} is the attacker.")
 
-                    ## Battle
-                    neighbor_soldier = self.country_info[ennemy]["army size"]
+                ## Battle
+                neighbor_soldier = self.country_info[ennemy]["army size"]
 
-                    roman_morale = 100
-                    neighbor_morale = 100
+                roman_morale = 100
+                neighbor_morale = 100
 
-                    cumulative_roman_losses = 0
+                cumulative_roman_losses = 0
 
-                    ennemy_damage_bonus = 0
+                ennemy_damage_bonus = 0
 
-                    if ennemy == "Samnites" and attacker != "Samnites":
-                        ennemy_damage_bonus += 25
-                        self.log(f"The Samnites are proficient at combat in the hills. They exploit this defensive advantage. (25% damage bonus)")
+                if ennemy == "Samnites" and attacker != "Samnites":
+                    ennemy_damage_bonus += 25
+                    self.log(f"The Samnites are proficient at combat in the hills. They exploit this defensive advantage. (25% damage bonus)")
 
-                    while roman_morale > 0 and neighbor_morale > 0:
-                        roman_losses = int(min(neighbor_soldier * 0.01 * (1 + ennemy_damage_bonus/100),self.roman_soldiers+self.socii_soldiers))
-                        neighbor_losses = int(min((self.roman_soldiers+self.socii_soldiers) * 0.01,neighbor_soldier))
+                while roman_morale > 0 and neighbor_morale > 0:
+                    roman_losses = int(min(neighbor_soldier * 0.01 * (1 + ennemy_damage_bonus/100),self.roman_soldiers+self.socii_soldiers))
+                    neighbor_losses = int(min((self.roman_soldiers+self.socii_soldiers) * 0.01,neighbor_soldier))
 
-                        cumulative_roman_losses += roman_losses
-                        if self.roman_soldiers+self.socii_soldiers > 0: 
-                            self.roman_soldiers -= int(roman_losses * self.roman_soldiers/(self.roman_soldiers+self.socii_soldiers))
-                        if self.roman_soldiers+self.socii_soldiers > 0:
-                            self.socii_soldiers -= int(roman_losses * self.socii_soldiers/(self.roman_soldiers+self.socii_soldiers))
-                        neighbor_soldier -= neighbor_losses
+                    cumulative_roman_losses += roman_losses
+                    if self.roman_soldiers+self.socii_soldiers > 0: 
+                        self.roman_soldiers -= int(roman_losses * self.roman_soldiers/(self.roman_soldiers+self.socii_soldiers))
+                    if self.roman_soldiers+self.socii_soldiers > 0:
+                        self.socii_soldiers -= int(roman_losses * self.socii_soldiers/(self.roman_soldiers+self.socii_soldiers))
+                    neighbor_soldier -= neighbor_losses
 
-                        if roman_losses > neighbor_losses:
-                            roman_morale -= 10
-                        else:
-                            neighbor_morale -= 10
-
-                    self.country_info[ennemy]["army size"] = neighbor_soldier
-
-                    if neighbor_morale <= 0:
-                        self.war_progression += 25
-                        self.log(f"The roman republic won a battle against {ennemy}. The war advances.")
-                        self.log("After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.")
-                        self.pro_war_influence = min(100,self.pro_war_influence + 5)
-                        self.log("The pro-war faction have an influence of "+str(self.pro_war_influence)+"%.")
-
-                        self.log("The roman army lost "+str(cumulative_roman_losses)+" soldiers in this battle.")
-
-                        if self.war_progression >= 100:
-                            self.roman_republic_size += 4
-                            self.socii_soldiers += 2000
-                            self.is_at_war_with.remove(ennemy)
-
-                            self.log(f"The roman republic won the war against {ennemy}. It annexes partially its territory")
-                            self.log("The defeated neighbor will contributes 2000 soldiers to future campaigns.")
-                            self.log(f"The socii contributes up to {self.socii_soldiers} soldiers.")
-                            self.log(f"Size of the roman republic {self.roman_republic_size}.")
-
-                            self.log("The senatorial pro-war faction ideas are applauded after this victory.")
-                            self.pro_war_influence = min(100,self.pro_war_influence + 10)
-                            self.log("The pro-war faction have an influence of "+str(self.pro_war_influence)+"%.")
-
-                        if self.country_info[ennemy]["army size"] == 0:
-                            self.log(f"{ennemy} was destroyed by Rome.")
-                            self.country_info.pop(ennemy)
-                            self.is_at_war_with.remove(ennemy)
-
-                            
+                    if roman_losses > neighbor_losses:
+                        roman_morale -= 10
                     else:
-                        self.war_progression -= 25
-                        self.log(f"The roman republic lost a battle against {ennemy}. The war stalls.")
-                        self.log("After this battle, the senatorial anti-war faction gain influence at the expanse of the pro-war faction.")
-                        self.pro_war_influence = min(100,self.pro_war_influence - 5)
+                        neighbor_morale -= 10
+
+                self.country_info[ennemy]["army size"] = neighbor_soldier
+
+                if neighbor_morale <= 0:
+                    self.war_progression += 25
+                    self.log(f"The roman republic won a battle against {ennemy}. The war advances.")
+                    self.log("After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.")
+                    self.pro_war_influence = min(100,self.pro_war_influence + 5)
+                    self.log("The pro-war faction have an influence of "+str(self.pro_war_influence)+"%.")
+
+                    self.log("The roman army lost "+str(cumulative_roman_losses)+" soldiers in this battle.")
+
+                    if self.war_progression >= 100:
+                        self.roman_republic_size += 4
+                        self.socii_soldiers += 2000
+                        self.is_at_war_with.remove(ennemy)
+
+                        self.log(f"The roman republic won the war against {ennemy}. It annexes partially its territory")
+                        self.log("The defeated neighbor will contributes 2000 soldiers to future campaigns.")
+                        self.log(f"The socii contributes up to {self.socii_soldiers} soldiers.")
+                        self.log(f"Size of the roman republic {self.roman_republic_size}.")
+
+                        self.log("The senatorial pro-war faction ideas are applauded after this victory.")
+                        self.pro_war_influence = min(100,self.pro_war_influence + 10)
                         self.log("The pro-war faction have an influence of "+str(self.pro_war_influence)+"%.")
 
-                        self.log("The roman army lost "+str(cumulative_roman_losses)+" soldiers in this battle.")
+                    if self.country_info[ennemy]["army size"] == 0:
+                        self.log(f"{ennemy} was destroyed by Rome.")
+                        self.country_info.pop(ennemy)
+                        self.is_at_war_with.remove(ennemy)
 
-                        if self.war_progression <= -100:
-                            self.roman_republic_size = max(self.roman_republic_size-4,0)
-                            self.is_at_war_with.remove(ennemy)
+                        
+                else:
+                    self.war_progression -= 25
+                    self.log(f"The roman republic lost a battle against {ennemy}. The war stalls.")
+                    self.log("After this battle, the senatorial anti-war faction gain influence at the expanse of the pro-war faction.")
+                    self.pro_war_influence = min(100,self.pro_war_influence - 5)
+                    self.log("The pro-war faction have an influence of "+str(self.pro_war_influence)+"%.")
 
-                            self.log(f"The roman republic lost the war against {ennemy}. It loses some of its territory.")
-                            
-                            self.log("Size of the roman republic : "+str(self.roman_republic_size)+".")
-                            self.incase_defeat()
+                    self.log("The roman army lost "+str(cumulative_roman_losses)+" soldiers in this battle.")
 
-                            self.log("The senatorial anti-war faction ideas are more considered after this costly defeat.")
-                            self.pro_war_influence = max(min(100,self.pro_war_influence - 20),0)
-                            self.log("The pro-war faction have an influence of "+str(self.pro_war_influence)+"%.")
+                    if self.war_progression <= -100:
+                        self.roman_republic_size = max(self.roman_republic_size-4,0)
+                        self.is_at_war_with.remove(ennemy)
 
-                if self.roman_soldiers + self.socii_soldiers == 0:
-                    self.log(f"The {ennemy} profits from the devasted roman army and destroy Rome.")
-                    self.roman_republic_size = 0
-                    self.incase_defeat()
+                        self.log(f"The roman republic lost the war against {ennemy}. It loses some of its territory.")
+                        
+                        self.log("Size of the roman republic : "+str(self.roman_republic_size)+".")
+                        self.incase_defeat()
+
+                        self.log("The senatorial anti-war faction ideas are more considered after this costly defeat.")
+                        self.pro_war_influence = max(min(100,self.pro_war_influence - 20),0)
+                        self.log("The pro-war faction have an influence of "+str(self.pro_war_influence)+"%.")
+
+            if self.roman_soldiers + self.socii_soldiers == 0:
+                self.log(f"The {ennemy} profits from the devasted roman army and destroy Rome.")
+                self.roman_republic_size = 0
+                self.incase_defeat()
 
             if not self.roman_republic_exist:
                 break
