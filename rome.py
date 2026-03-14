@@ -46,9 +46,18 @@ class Sim:
                 
                 self.log(str(self.roman_soldiers)+" romans soldiers and "+str(self.socii_soldiers)+" socii soldiers faces 3000 soldiers from a neighbor.")
                 ## Battle
-                prob_victory = (self.roman_soldiers+self.socii_soldiers)/(self.roman_soldiers+self.socii_soldiers + 3000)
+                neighbor_soldier = 3000
 
-                if randint(0,100) < prob_victory * 100:
+                while self.roman_soldiers+self.socii_soldiers > 0 and neighbor_soldier > 0:
+                    roman_losses = round(min(neighbor_soldier * 0.01,self.roman_soldiers+self.socii_soldiers))
+                    neighbor_losses = (self.roman_soldiers+self.socii_soldiers) * 0.01
+
+                    self.roman_soldiers -= roman_losses * self.roman_soldiers/(self.roman_soldiers+self.socii_soldiers)
+                    if self.socii_soldiers > 0:
+                        self.socii_soldiers -= roman_losses * self.socii_soldiers/(self.roman_soldiers+self.socii_soldiers)
+                    neighbor_soldier -= neighbor_losses
+
+                if neighbor_soldier <= 0:
                     self.war_progression += 25
                     self.log("The roman republic won a battle against a neighbor. The war advances.")
                     self.log("After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.")
@@ -69,9 +78,6 @@ class Sim:
                 else:
                     self.war_progression -= 25
                     self.log("The roman republic lost a battle against a neighbor. The war stalls.")
-                    losses = min(self.default_battle_losses,self.roman_soldiers)
-                    self.roman_soldiers -= losses
-                    self.log(str(losses)+" romans soldiers died.")
                     self.log("After this battle, the senatorial anti-war faction gain influence at the expanse of the pro-war faction.")
                     self.pro_war_influence = min(100,self.pro_war_influence - 5)
                     self.log("The pro-war faction have an influence of "+str(self.pro_war_influence)+"%.")
@@ -156,6 +162,7 @@ class Sim:
             if randint(0,100) < 20 and self.is_at_war_etruscans:
                 self.log("The roman republic makes a white peace with the etruscans.")
                 self.is_at_war_etruscans = False
+                self.war_progression = 0
             
             if randint(0,100) < 30:
                 self.log("200 new citizens of Rome are ready for war.")
