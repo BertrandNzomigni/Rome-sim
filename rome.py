@@ -21,7 +21,7 @@ class Sim:
         self.war_progression = 0
         self.is_at_war_etruscans = True
         self.roman_republic_exist = True
-        self.roman_soldiers = 1000
+        self.roman_soldiers = 3000
         self.socii_soldiers = 0
         self.wariness_war = False
 
@@ -48,21 +48,36 @@ class Sim:
                 ## Battle
                 neighbor_soldier = 3000
 
-                while self.roman_soldiers+self.socii_soldiers > 0 and neighbor_soldier > 0:
-                    roman_losses = round(min(neighbor_soldier * 0.01,self.roman_soldiers+self.socii_soldiers))
+                roman_morale = 100
+                neighbor_morale = 100
+
+                cumulative_roman_losses = 0
+
+                while roman_morale > 0 and neighbor_morale > 0:
+                    roman_losses = int(min(neighbor_soldier * 0.01,self.roman_soldiers+self.socii_soldiers))
                     neighbor_losses = (self.roman_soldiers+self.socii_soldiers) * 0.01
 
-                    self.roman_soldiers -= roman_losses * self.roman_soldiers/(self.roman_soldiers+self.socii_soldiers)
+                    cumulative_roman_losses += roman_losses
+
+                    self.roman_soldiers -= int(roman_losses * self.roman_soldiers/(self.roman_soldiers+self.socii_soldiers))
                     if self.socii_soldiers > 0:
-                        self.socii_soldiers -= roman_losses * self.socii_soldiers/(self.roman_soldiers+self.socii_soldiers)
+                        self.socii_soldiers -= int(roman_losses * self.socii_soldiers/(self.roman_soldiers+self.socii_soldiers))
                     neighbor_soldier -= neighbor_losses
 
-                if neighbor_soldier <= 0:
+                    if roman_losses > neighbor_losses:
+                        roman_morale -= 10
+                    else:
+                        neighbor_morale -= 10
+
+                if neighbor_morale <= 0:
                     self.war_progression += 25
                     self.log("The roman republic won a battle against a neighbor. The war advances.")
                     self.log("After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.")
                     self.pro_war_influence = min(100,self.pro_war_influence + 5)
                     self.log("The pro-war faction have an influence of "+str(self.pro_war_influence)+"%.")
+
+                    self.log("The roman army lost "+str(cumulative_roman_losses)+" soldiers in this battle.")
+
                     if self.war_progression >= 100:
                         self.roman_republic_size += 4
                         self.socii_soldiers += 2000
@@ -81,6 +96,9 @@ class Sim:
                     self.log("After this battle, the senatorial anti-war faction gain influence at the expanse of the pro-war faction.")
                     self.pro_war_influence = min(100,self.pro_war_influence - 5)
                     self.log("The pro-war faction have an influence of "+str(self.pro_war_influence)+"%.")
+
+                    self.log("The roman army lost "+str(cumulative_roman_losses)+" soldiers in this battle.")
+
                     if self.war_progression <= -100:
                         self.roman_republic_size = max(self.roman_republic_size-4,0)
                         self.log("The roman republic lost the war against its neighbor. It loses some of its territory.")

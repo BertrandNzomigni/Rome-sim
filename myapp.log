@@ -1,4 +1,4 @@
-INFO:SIM:[509 BC] 1000 romans soldiers and 0 socii soldiers faces 5000 etruscans soldiers.
+INFO:SIM:[509 BC] 3000 romans soldiers and 0 socii soldiers faces 5000 etruscans soldiers.
 INFO:SIM:[509 BC] The roman republic won against the etruscans. It annex 1 unit of territory from the Etruscans.
 INFO:SIM:[509 BC] Size of the roman republic : 6.
 INFO:SIM:[509 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
@@ -6,16 +6,421 @@ INFO:SIM:[509 BC] The pro-war faction have an influence of 45%.
 INFO:SIM:[509 BC] The conditions of Rome is critical. The senate is wary to declare new wars.
 INFO:SIM:[509 BC] The senate negotiates a peace with the Etruscans. The etruscans accept a peace in exchange of a tribute.
 INFO:SIM:[508 BC] 200 new citizens of Rome are ready for war.
-INFO:SIM:[508 BC] The roman republic have 1200 soldiers (without socii).
-INFO:SIM:[507 BC] The romans become more thirsty for war after this period of peace. The pro-war faction benefits.
-INFO:SIM:[507 BC] The pro-war faction have an influence of 50%.
-INFO:SIM:[506 BC] The conditions of Rome improved. The senate is more prone to declare new wars.
-INFO:SIM:[504 BC] A consul seek glory. The Roman republic declare war on a neighbor.
+INFO:SIM:[508 BC] The roman republic have 3200 soldiers (without socii).
+INFO:SIM:[505 BC] 200 new citizens of Rome are ready for war.
+INFO:SIM:[505 BC] The roman republic have 3400 soldiers (without socii).
 INFO:SIM:[504 BC] 200 new citizens of Rome are ready for war.
-INFO:SIM:[504 BC] The roman republic have 1400 soldiers (without socii).
-INFO:SIM:[503 BC] 1400 romans soldiers and 0 socii soldiers faces 3000 soldiers from a neighbor.
-INFO:SIM:[503 BC] The roman republic lost a battle against a neighbor. The war stalls.
-INFO:SIM:[503 BC] After this battle, the senatorial anti-war faction gain influence at the expanse of the pro-war faction.
-INFO:SIM:[503 BC] The pro-war faction have an influence of 45%.
-INFO:SIM:[503 BC] The neighboring ennemy profits from the devasted roman army and destroy Rome.
-INFO:SIM:[503 BC] The roman republic disapears.
+INFO:SIM:[504 BC] The roman republic have 3600 soldiers (without socii).
+INFO:SIM:[502 BC] 200 new citizens of Rome are ready for war.
+INFO:SIM:[502 BC] The roman republic have 3800 soldiers (without socii).
+INFO:SIM:[500 BC] 200 new citizens of Rome are ready for war.
+INFO:SIM:[500 BC] The roman republic have 4000 soldiers (without socii).
+INFO:SIM:[497 BC] 200 new citizens of Rome are ready for war.
+INFO:SIM:[497 BC] The roman republic have 4200 soldiers (without socii).
+INFO:SIM:[496 BC] 200 new citizens of Rome are ready for war.
+INFO:SIM:[496 BC] The roman republic have 4400 soldiers (without socii).
+INFO:SIM:[493 BC] 200 new citizens of Rome are ready for war.
+INFO:SIM:[493 BC] The roman republic have 4600 soldiers (without socii).
+INFO:SIM:[490 BC] The romans become more thirsty for war after this period of peace. The pro-war faction benefits.
+INFO:SIM:[490 BC] The pro-war faction have an influence of 50%.
+INFO:SIM:[490 BC] 200 new citizens of Rome are ready for war.
+INFO:SIM:[490 BC] The roman republic have 4800 soldiers (without socii).
+INFO:SIM:[489 BC] The conditions of Rome improved. The senate is more prone to declare new wars.
+INFO:SIM:[486 BC] A consul seek glory. The Roman republic declare war on a neighbor.
+INFO:SIM:[485 BC] 4800 romans soldiers and 0 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[485 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[485 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[485 BC] The pro-war faction have an influence of 55%.
+INFO:SIM:[485 BC] The roman army lost 275 soldiers in this battle.
+INFO:SIM:[484 BC] 4525 romans soldiers and 0 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[484 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[484 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[484 BC] The pro-war faction have an influence of 60%.
+INFO:SIM:[484 BC] The roman army lost 276 soldiers in this battle.
+INFO:SIM:[483 BC] 4249 romans soldiers and 0 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[483 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[483 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[483 BC] The pro-war faction have an influence of 65%.
+INFO:SIM:[483 BC] The roman army lost 277 soldiers in this battle.
+INFO:SIM:[483 BC] 200 new citizens of Rome are ready for war.
+INFO:SIM:[483 BC] The roman republic have 4172 soldiers (without socii).
+INFO:SIM:[482 BC] 4172 romans soldiers and 0 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[482 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[482 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[482 BC] The pro-war faction have an influence of 70%.
+INFO:SIM:[482 BC] The roman army lost 277 soldiers in this battle.
+INFO:SIM:[482 BC] The roman republic won the war against its neighbor. It annexes partially its territory
+INFO:SIM:[482 BC] The defeated neighbor will contributes 2000 soldiers to future campaigns.
+INFO:SIM:[482 BC] The socii contributes up to 2000 soldiers.
+INFO:SIM:[482 BC] Size of the roman republic : 10.
+INFO:SIM:[482 BC] The senatorial pro-war faction ideas are applauded after this victory.
+INFO:SIM:[482 BC] The pro-war faction have an influence of 80%.
+INFO:SIM:[481 BC] A consul seek glory. The Roman republic declare war on a neighbor.
+INFO:SIM:[480 BC] 3895 romans soldiers and 2000 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[480 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[480 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[480 BC] The pro-war faction have an influence of 85%.
+INFO:SIM:[480 BC] The roman army lost 269 soldiers in this battle.
+INFO:SIM:[479 BC] 3723 romans soldiers and 1913 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[479 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[479 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[479 BC] The pro-war faction have an influence of 90%.
+INFO:SIM:[479 BC] The roman army lost 271 soldiers in this battle.
+INFO:SIM:[478 BC] 3549 romans soldiers and 1826 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[478 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[478 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[478 BC] The pro-war faction have an influence of 95%.
+INFO:SIM:[478 BC] The roman army lost 271 soldiers in this battle.
+INFO:SIM:[478 BC] 200 new citizens of Rome are ready for war.
+INFO:SIM:[478 BC] The roman republic have 3575 soldiers (without socii).
+INFO:SIM:[477 BC] 3575 romans soldiers and 1739 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[477 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[477 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[477 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[477 BC] The roman army lost 271 soldiers in this battle.
+INFO:SIM:[477 BC] The roman republic won the war against its neighbor. It annexes partially its territory
+INFO:SIM:[477 BC] The defeated neighbor will contributes 2000 soldiers to future campaigns.
+INFO:SIM:[477 BC] The socii contributes up to 3655 soldiers.
+INFO:SIM:[477 BC] Size of the roman republic : 14.
+INFO:SIM:[477 BC] The senatorial pro-war faction ideas are applauded after this victory.
+INFO:SIM:[477 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[477 BC] A consul seek glory. The Roman republic declare war on a neighbor.
+INFO:SIM:[476 BC] 3398 romans soldiers and 3655 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[476 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[476 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[476 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[476 BC] The roman army lost 264 soldiers in this battle.
+INFO:SIM:[475 BC] 3274 romans soldiers and 3523 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[475 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[475 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[475 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[475 BC] The roman army lost 264 soldiers in this battle.
+INFO:SIM:[474 BC] 3150 romans soldiers and 3391 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[474 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[474 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[474 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[474 BC] The roman army lost 267 soldiers in this battle.
+INFO:SIM:[473 BC] 3026 romans soldiers and 3257 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[473 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[473 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[473 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[473 BC] The roman army lost 268 soldiers in this battle.
+INFO:SIM:[473 BC] The roman republic won the war against its neighbor. It annexes partially its territory
+INFO:SIM:[473 BC] The defeated neighbor will contributes 2000 soldiers to future campaigns.
+INFO:SIM:[473 BC] The socii contributes up to 5123 soldiers.
+INFO:SIM:[473 BC] Size of the roman republic : 18.
+INFO:SIM:[473 BC] The senatorial pro-war faction ideas are applauded after this victory.
+INFO:SIM:[473 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[471 BC] A consul seek glory. The Roman republic declare war on a neighbor.
+INFO:SIM:[470 BC] 2901 romans soldiers and 5123 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[470 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[470 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[470 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[470 BC] The roman army lost 260 soldiers in this battle.
+INFO:SIM:[469 BC] 2812 romans soldiers and 4962 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[469 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[469 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[469 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[469 BC] The roman army lost 261 soldiers in this battle.
+INFO:SIM:[469 BC] 200 new citizens of Rome are ready for war.
+INFO:SIM:[469 BC] The roman republic have 2922 soldiers (without socii).
+INFO:SIM:[468 BC] 2922 romans soldiers and 4801 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[468 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[468 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[468 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[468 BC] The roman army lost 261 soldiers in this battle.
+INFO:SIM:[467 BC] 2829 romans soldiers and 4643 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[467 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[467 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[467 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[467 BC] The roman army lost 263 soldiers in this battle.
+INFO:SIM:[467 BC] The roman republic won the war against its neighbor. It annexes partially its territory
+INFO:SIM:[467 BC] The defeated neighbor will contributes 2000 soldiers to future campaigns.
+INFO:SIM:[467 BC] The socii contributes up to 6485 soldiers.
+INFO:SIM:[467 BC] Size of the roman republic : 22.
+INFO:SIM:[467 BC] The senatorial pro-war faction ideas are applauded after this victory.
+INFO:SIM:[467 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[466 BC] The romans become more thirsty for war after this period of peace. The pro-war faction benefits.
+INFO:SIM:[466 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[466 BC] 200 new citizens of Rome are ready for war.
+INFO:SIM:[466 BC] The roman republic have 2934 soldiers (without socii).
+INFO:SIM:[465 BC] 200 new citizens of Rome are ready for war.
+INFO:SIM:[465 BC] The roman republic have 3134 soldiers (without socii).
+INFO:SIM:[464 BC] A consul seek glory. The Roman republic declare war on a neighbor.
+INFO:SIM:[463 BC] 3134 romans soldiers and 6485 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[463 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[463 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[463 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[463 BC] The roman army lost 255 soldiers in this battle.
+INFO:SIM:[463 BC] 200 new citizens of Rome are ready for war.
+INFO:SIM:[463 BC] The roman republic have 3256 soldiers (without socii).
+INFO:SIM:[462 BC] 3256 romans soldiers and 6318 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[462 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[462 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[462 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[462 BC] The roman army lost 255 soldiers in this battle.
+INFO:SIM:[461 BC] 3174 romans soldiers and 6155 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[461 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[461 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[461 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[461 BC] The roman army lost 255 soldiers in this battle.
+INFO:SIM:[460 BC] 3092 romans soldiers and 5992 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[460 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[460 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[460 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[460 BC] The roman army lost 255 soldiers in this battle.
+INFO:SIM:[460 BC] The roman republic won the war against its neighbor. It annexes partially its territory
+INFO:SIM:[460 BC] The defeated neighbor will contributes 2000 soldiers to future campaigns.
+INFO:SIM:[460 BC] The socii contributes up to 7829 soldiers.
+INFO:SIM:[460 BC] Size of the roman republic : 26.
+INFO:SIM:[460 BC] The senatorial pro-war faction ideas are applauded after this victory.
+INFO:SIM:[460 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[460 BC] A consul seek glory. The Roman republic declare war on a neighbor.
+INFO:SIM:[459 BC] 3010 romans soldiers and 7829 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[459 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[459 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[459 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[459 BC] The roman army lost 246 soldiers in this battle.
+INFO:SIM:[458 BC] 2947 romans soldiers and 7656 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[458 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[458 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[458 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[458 BC] The roman army lost 246 soldiers in this battle.
+INFO:SIM:[457 BC] 2884 romans soldiers and 7483 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[457 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[457 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[457 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[457 BC] The roman army lost 246 soldiers in this battle.
+INFO:SIM:[457 BC] 200 new citizens of Rome are ready for war.
+INFO:SIM:[457 BC] The roman republic have 3021 soldiers (without socii).
+INFO:SIM:[456 BC] 3021 romans soldiers and 7310 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[456 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[456 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[456 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[456 BC] The roman army lost 246 soldiers in this battle.
+INFO:SIM:[456 BC] The roman republic won the war against its neighbor. It annexes partially its territory
+INFO:SIM:[456 BC] The defeated neighbor will contributes 2000 soldiers to future campaigns.
+INFO:SIM:[456 BC] The socii contributes up to 9141 soldiers.
+INFO:SIM:[456 BC] Size of the roman republic : 30.
+INFO:SIM:[456 BC] The senatorial pro-war faction ideas are applauded after this victory.
+INFO:SIM:[456 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[455 BC] The romans become more thirsty for war after this period of peace. The pro-war faction benefits.
+INFO:SIM:[455 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[453 BC] 200 new citizens of Rome are ready for war.
+INFO:SIM:[453 BC] The roman republic have 3154 soldiers (without socii).
+INFO:SIM:[451 BC] 200 new citizens of Rome are ready for war.
+INFO:SIM:[451 BC] The roman republic have 3354 soldiers (without socii).
+INFO:SIM:[450 BC] A consul seek glory. The Roman republic declare war on a neighbor.
+INFO:SIM:[449 BC] 3354 romans soldiers and 9141 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[449 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[449 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[449 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[449 BC] The roman army lost 240 soldiers in this battle.
+INFO:SIM:[448 BC] 3295 romans soldiers and 8970 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[448 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[448 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[448 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[448 BC] The roman army lost 241 soldiers in this battle.
+INFO:SIM:[448 BC] 200 new citizens of Rome are ready for war.
+INFO:SIM:[448 BC] The roman republic have 3435 soldiers (without socii).
+INFO:SIM:[447 BC] 3435 romans soldiers and 8799 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[447 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[447 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[447 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[447 BC] The roman army lost 241 soldiers in this battle.
+INFO:SIM:[446 BC] 3372 romans soldiers and 8631 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[446 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[446 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[446 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[446 BC] The roman army lost 242 soldiers in this battle.
+INFO:SIM:[446 BC] The roman republic won the war against its neighbor. It annexes partially its territory
+INFO:SIM:[446 BC] The defeated neighbor will contributes 2000 soldiers to future campaigns.
+INFO:SIM:[446 BC] The socii contributes up to 10462 soldiers.
+INFO:SIM:[446 BC] Size of the roman republic : 34.
+INFO:SIM:[446 BC] The senatorial pro-war faction ideas are applauded after this victory.
+INFO:SIM:[446 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[445 BC] A consul seek glory. The Roman republic declare war on a neighbor.
+INFO:SIM:[444 BC] 3309 romans soldiers and 10462 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[444 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[444 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[444 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[444 BC] The roman army lost 234 soldiers in this battle.
+INFO:SIM:[443 BC] 3257 romans soldiers and 10290 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[443 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[443 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[443 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[443 BC] The roman army lost 234 soldiers in this battle.
+INFO:SIM:[443 BC] 200 new citizens of Rome are ready for war.
+INFO:SIM:[443 BC] The roman republic have 3405 soldiers (without socii).
+INFO:SIM:[442 BC] 3405 romans soldiers and 10118 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[442 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[442 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[442 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[442 BC] The roman army lost 234 soldiers in this battle.
+INFO:SIM:[441 BC] 3350 romans soldiers and 9949 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[441 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[441 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[441 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[441 BC] The roman army lost 237 soldiers in this battle.
+INFO:SIM:[441 BC] The roman republic won the war against its neighbor. It annexes partially its territory
+INFO:SIM:[441 BC] The defeated neighbor will contributes 2000 soldiers to future campaigns.
+INFO:SIM:[441 BC] The socii contributes up to 11777 soldiers.
+INFO:SIM:[441 BC] Size of the roman republic : 38.
+INFO:SIM:[441 BC] The senatorial pro-war faction ideas are applauded after this victory.
+INFO:SIM:[441 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[441 BC] The romans become more thirsty for war after this period of peace. The pro-war faction benefits.
+INFO:SIM:[441 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[441 BC] A consul seek glory. The Roman republic declare war on a neighbor.
+INFO:SIM:[440 BC] 3295 romans soldiers and 11777 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[440 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[440 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[440 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[440 BC] The roman army lost 227 soldiers in this battle.
+INFO:SIM:[439 BC] 3250 romans soldiers and 11605 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[439 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[439 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[439 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[439 BC] The roman army lost 230 soldiers in this battle.
+INFO:SIM:[438 BC] 3205 romans soldiers and 11430 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[438 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[438 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[438 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[438 BC] The roman army lost 230 soldiers in this battle.
+INFO:SIM:[438 BC] 200 new citizens of Rome are ready for war.
+INFO:SIM:[438 BC] The roman republic have 3360 soldiers (without socii).
+INFO:SIM:[437 BC] 3360 romans soldiers and 11255 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[437 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[437 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[437 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[437 BC] The roman army lost 230 soldiers in this battle.
+INFO:SIM:[437 BC] The roman republic won the war against its neighbor. It annexes partially its territory
+INFO:SIM:[437 BC] The defeated neighbor will contributes 2000 soldiers to future campaigns.
+INFO:SIM:[437 BC] The socii contributes up to 13083 soldiers.
+INFO:SIM:[437 BC] Size of the roman republic : 42.
+INFO:SIM:[437 BC] The senatorial pro-war faction ideas are applauded after this victory.
+INFO:SIM:[437 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[437 BC] The romans become more thirsty for war after this period of peace. The pro-war faction benefits.
+INFO:SIM:[437 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[435 BC] The romans become more thirsty for war after this period of peace. The pro-war faction benefits.
+INFO:SIM:[435 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[435 BC] 200 new citizens of Rome are ready for war.
+INFO:SIM:[435 BC] The roman republic have 3512 soldiers (without socii).
+INFO:SIM:[434 BC] The romans become more thirsty for war after this period of peace. The pro-war faction benefits.
+INFO:SIM:[434 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[433 BC] A consul seek glory. The Roman republic declare war on a neighbor.
+INFO:SIM:[432 BC] 3512 romans soldiers and 13083 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[432 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[432 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[432 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[432 BC] The roman army lost 222 soldiers in this battle.
+INFO:SIM:[432 BC] 200 new citizens of Rome are ready for war.
+INFO:SIM:[432 BC] The roman republic have 3670 soldiers (without socii).
+INFO:SIM:[431 BC] 3670 romans soldiers and 12913 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[431 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[431 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[431 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[431 BC] The roman army lost 222 soldiers in this battle.
+INFO:SIM:[430 BC] 3626 romans soldiers and 12745 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[430 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[430 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[430 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[430 BC] The roman army lost 222 soldiers in this battle.
+INFO:SIM:[429 BC] 3582 romans soldiers and 12577 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[429 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[429 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[429 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[429 BC] The roman army lost 223 soldiers in this battle.
+INFO:SIM:[429 BC] The roman republic won the war against its neighbor. It annexes partially its territory
+INFO:SIM:[429 BC] The defeated neighbor will contributes 2000 soldiers to future campaigns.
+INFO:SIM:[429 BC] The socii contributes up to 14408 soldiers.
+INFO:SIM:[429 BC] Size of the roman republic : 46.
+INFO:SIM:[429 BC] The senatorial pro-war faction ideas are applauded after this victory.
+INFO:SIM:[429 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[429 BC] 200 new citizens of Rome are ready for war.
+INFO:SIM:[429 BC] The roman republic have 3738 soldiers (without socii).
+INFO:SIM:[428 BC] 200 new citizens of Rome are ready for war.
+INFO:SIM:[428 BC] The roman republic have 3938 soldiers (without socii).
+INFO:SIM:[427 BC] A consul seek glory. The Roman republic declare war on a neighbor.
+INFO:SIM:[426 BC] 3938 romans soldiers and 14408 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[426 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[426 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[426 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[426 BC] The roman army lost 214 soldiers in this battle.
+INFO:SIM:[425 BC] 3896 romans soldiers and 14246 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[425 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[425 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[425 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[425 BC] The roman army lost 214 soldiers in this battle.
+INFO:SIM:[424 BC] 3854 romans soldiers and 14084 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[424 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[424 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[424 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[424 BC] The roman army lost 215 soldiers in this battle.
+INFO:SIM:[423 BC] 3812 romans soldiers and 13921 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[423 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[423 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[423 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[423 BC] The roman army lost 216 soldiers in this battle.
+INFO:SIM:[423 BC] The roman republic won the war against its neighbor. It annexes partially its territory
+INFO:SIM:[423 BC] The defeated neighbor will contributes 2000 soldiers to future campaigns.
+INFO:SIM:[423 BC] The socii contributes up to 15758 soldiers.
+INFO:SIM:[423 BC] Size of the roman republic : 50.
+INFO:SIM:[423 BC] The senatorial pro-war faction ideas are applauded after this victory.
+INFO:SIM:[423 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[422 BC] 200 new citizens of Rome are ready for war.
+INFO:SIM:[422 BC] The roman republic have 3969 soldiers (without socii).
+INFO:SIM:[420 BC] 200 new citizens of Rome are ready for war.
+INFO:SIM:[420 BC] The roman republic have 4169 soldiers (without socii).
+INFO:SIM:[418 BC] The romans become more thirsty for war after this period of peace. The pro-war faction benefits.
+INFO:SIM:[418 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[418 BC] A consul seek glory. The Roman republic declare war on a neighbor.
+INFO:SIM:[418 BC] 200 new citizens of Rome are ready for war.
+INFO:SIM:[418 BC] The roman republic have 4369 soldiers (without socii).
+INFO:SIM:[417 BC] 4369 romans soldiers and 15758 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[417 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[417 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[417 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[417 BC] The roman army lost 201 soldiers in this battle.
+INFO:SIM:[416 BC] 4331 romans soldiers and 15605 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[416 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[416 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[416 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[416 BC] The roman army lost 210 soldiers in this battle.
+INFO:SIM:[415 BC] 4290 romans soldiers and 15446 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[415 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[415 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[415 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[415 BC] The roman army lost 210 soldiers in this battle.
+INFO:SIM:[414 BC] 4249 romans soldiers and 15287 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[414 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[414 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[414 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[414 BC] The roman army lost 210 soldiers in this battle.
+INFO:SIM:[414 BC] The roman republic won the war against its neighbor. It annexes partially its territory
+INFO:SIM:[414 BC] The defeated neighbor will contributes 2000 soldiers to future campaigns.
+INFO:SIM:[414 BC] The socii contributes up to 17128 soldiers.
+INFO:SIM:[414 BC] Size of the roman republic : 54.
+INFO:SIM:[414 BC] The senatorial pro-war faction ideas are applauded after this victory.
+INFO:SIM:[414 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[414 BC] 200 new citizens of Rome are ready for war.
+INFO:SIM:[414 BC] The roman republic have 4408 soldiers (without socii).
+INFO:SIM:[413 BC] A consul seek glory. The Roman republic declare war on a neighbor.
+INFO:SIM:[412 BC] 4408 romans soldiers and 17128 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[412 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[412 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[412 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[412 BC] The roman army lost 198 soldiers in this battle.
+INFO:SIM:[412 BC] 200 new citizens of Rome are ready for war.
+INFO:SIM:[412 BC] The roman republic have 4572 soldiers (without socii).
+INFO:SIM:[411 BC] 4572 romans soldiers and 16976 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[411 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[411 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[411 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[411 BC] The roman army lost 198 soldiers in this battle.
+INFO:SIM:[411 BC] 200 new citizens of Rome are ready for war.
+INFO:SIM:[411 BC] The roman republic have 4735 soldiers (without socii).
+INFO:SIM:[410 BC] 4735 romans soldiers and 16825 socii soldiers faces 3000 soldiers from a neighbor.
+INFO:SIM:[410 BC] The roman republic won a battle against a neighbor. The war advances.
+INFO:SIM:[410 BC] After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.
+INFO:SIM:[410 BC] The pro-war faction have an influence of 100%.
+INFO:SIM:[410 BC] The roman army lost 198 soldiers in this battle.

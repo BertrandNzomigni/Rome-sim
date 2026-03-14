@@ -16,3 +16,4 @@
 - Un camp pro-guerre et anti-guerre dans le sénat lutte pour le pouvoir. (Fait)
     - Chaque camp a une influence qui varie avec les victoires et les défaites millitaires. (Fait)
 - Chaque bataille mène à des pertes.
+    - La logique des batailles est unifié entre les étrusques et les voisins.
