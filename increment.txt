@@ -19,3 +19,4 @@
     - La logique des batailles est unifié entre les étrusques et les voisins.
 - Les ennemis de Rome subissent des pertes. (Fait)
 - Les ennemis peuvent se renforcer avec le temps. (Fait)
+- Les ennemis peuvent être détruits. (Fait)

@@ -37,6 +37,9 @@ class Sim:
 
         self.country_info = {"Etruscans" : {"army size":3000},"Samnites":{"army size":5000}}
 
+        # Interface
+        self.output_this_year = False
+
 
     def incase_defeat(self):
         if self.roman_republic_size <= 0:
@@ -45,6 +48,7 @@ class Sim:
     
     def log(self,text):
         logger.info("["+str(self.year)+" BC] " + text)
+        self.output_this_year = True
         
     def run(self):
         while self.year > self.beginning_year - self.duration and self.roman_republic_exist:
@@ -100,6 +104,11 @@ class Sim:
                             self.pro_war_influence = min(100,self.pro_war_influence + 10)
                             self.log("The pro-war faction have an influence of "+str(self.pro_war_influence)+"%.")
 
+                        if self.country_info[ennemy]["army size"] == 0:
+                            self.log(f"{ennemy} was destroyed by Rome.")
+                            self.country_info.pop(ennemy)
+                            self.is_at_war_with.remove(ennemy)
+
                             
                     else:
                         self.war_progression -= 25
@@ -148,7 +157,7 @@ class Sim:
                     self.log(f"The senate negotiates a peace with {ennemy}. It accept a peace in exchange of a tribute.")
                     self.is_at_war_with.remove(ennemy)
      
-            if randint(0,100) < 30 and len(self.is_at_war_with) == 0 and not self.wariness_war:
+            if randint(0,100) < 30 and len(self.is_at_war_with) == 0 and not self.wariness_war and len(self.country_info) > len(self.is_at_war_with):
                 target = None
                 while target == None:
                     x = choice(list(self.country_info.keys()))
@@ -170,6 +179,9 @@ class Sim:
                     self.log(f"{country} have {self.country_info[country]["army size"]} soldiers.")
 
 
+            if self.output_this_year:
+                logger.info("_________________________")
+                self.output_this_year = False
             self.year -= 1
 
 s = Sim()
