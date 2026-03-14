@@ -16,7 +16,7 @@ class Sim:
         self.italy_size = 1000
         self.beginning_year = 509
         self.year = self.beginning_year
-        self.duration = 100
+        self.duration = 50
         self.roman_republic_size = 5
         self.is_at_war = False
         self.war_progression = 0
@@ -61,7 +61,7 @@ class Sim:
 
                     while roman_morale > 0 and neighbor_morale > 0:
                         roman_losses = int(min(neighbor_soldier * 0.01,self.roman_soldiers+self.socii_soldiers))
-                        neighbor_losses = (self.roman_soldiers+self.socii_soldiers) * 0.01
+                        neighbor_losses = int(min((self.roman_soldiers+self.socii_soldiers) * 0.01,neighbor_soldier))
 
                         cumulative_roman_losses += roman_losses
                         if self.roman_soldiers+self.socii_soldiers > 0: 
@@ -74,6 +74,8 @@ class Sim:
                             roman_morale -= 10
                         else:
                             neighbor_morale -= 10
+
+                    self.country_info[ennemy]["army size"] = neighbor_soldier
 
                     if neighbor_morale <= 0:
                         self.war_progression += 25

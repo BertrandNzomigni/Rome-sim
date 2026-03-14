@@ -15,5 +15,6 @@
 - La république romaine peut essayer de négocier une paix. (Fait)
 - Un camp pro-guerre et anti-guerre dans le sénat lutte pour le pouvoir. (Fait)
     - Chaque camp a une influence qui varie avec les victoires et les défaites millitaires. (Fait)
-- Chaque bataille mène à des pertes.
+- Chaque bataille mène à des pertes. (Fait)
     - La logique des batailles est unifié entre les étrusques et les voisins.
+- Les ennemis de Rome subissent des pertes. (Fait)
