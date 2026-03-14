@@ -20,3 +20,4 @@
 - Les ennemis de Rome subissent des pertes. (Fait)
 - Les ennemis peuvent se renforcer avec le temps. (Fait)
 - Les ennemis peuvent être détruits. (Fait)
+- Les samnites ont un avantage défensif lorsqu'ils sont attaqués.

@@ -55,6 +55,10 @@ class Sim:
             for ennemy in self.is_at_war_with:
                 if self.roman_soldiers + self.socii_soldiers > 0: 
                     self.log(f"{self.roman_soldiers} romans soldiers and {self.socii_soldiers} socii soldiers faces {self.country_info[ennemy]["army size"]} soldiers from {ennemy}")
+
+                    attacker = choice(["Rome",ennemy])
+                    self.log(f"{attacker} is the attacker.")
+
                     ## Battle
                     neighbor_soldier = self.country_info[ennemy]["army size"]
 
@@ -63,8 +67,14 @@ class Sim:
 
                     cumulative_roman_losses = 0
 
+                    ennemy_damage_bonus = 0
+
+                    if ennemy == "Samnites" and attacker != "Samnites":
+                        ennemy_damage_bonus += 25
+                        self.log(f"The Samnites are proficient at combat in the hills. They exploit this defensive advantage. (25% damage bonus)")
+
                     while roman_morale > 0 and neighbor_morale > 0:
-                        roman_losses = int(min(neighbor_soldier * 0.01,self.roman_soldiers+self.socii_soldiers))
+                        roman_losses = int(min(neighbor_soldier * 0.01 * (1 + ennemy_damage_bonus/100),self.roman_soldiers+self.socii_soldiers))
                         neighbor_losses = int(min((self.roman_soldiers+self.socii_soldiers) * 0.01,neighbor_soldier))
 
                         cumulative_roman_losses += roman_losses
