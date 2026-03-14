@@ -1,3 +1,4 @@
+import copy
 from random import randint
 from random import choice
 import logging
@@ -33,7 +34,7 @@ class Sim:
 
         # Diplomacy
 
-        self.is_at_war_with = ["Etruscans"]
+        self.roman_war = {"Etruscans":{"occupied cities balance":0}}
 
         self.country_info = {"Etruscans" : {"army size":3000},"Samnites":{"army size":5000}}
 
@@ -53,8 +54,8 @@ class Sim:
     def run(self):
         while self.year > self.beginning_year - self.duration and self.roman_republic_exist:
             
-            while randint(0,100) < 75 and self.roman_soldiers + self.socii_soldiers > 0 and len(self.is_at_war_with) > 0:
-                ennemy = choice(self.is_at_war_with)
+            while randint(0,100) < 75 and self.roman_soldiers + self.socii_soldiers > 0 and len(self.roman_war.keys()) > 0:
+                ennemy = choice(list(self.roman_war.keys()))
                 self.log(f"{self.roman_soldiers} romans soldiers and {self.socii_soldiers} socii soldiers faces {self.country_info[ennemy]["army size"]} soldiers from {ennemy}")
 
 
@@ -104,15 +105,24 @@ class Sim:
 
                     if attacker == "Rome":
                         self.log(f"Rome besieges a city of {defender}.")
+                        if randint(0,100) < 10:
+                            self.log(f"The siege is succesful.")
+                            self.roman_war[ennemy]["occupied cities balance"] += 1
+                            self.log(f"The balance of occupied cities is {self.roman_war[ennemy]["occupied cities balance"]} in favor of Rome.")
+                        else:
+                            self.log(f"The siege is unsuccesful.")
 
                     self.log("The roman army lost "+str(cumulative_roman_losses)+" soldiers in this battle.")
 
                     if self.war_progression >= 100:
-                        self.roman_republic_size += 4
-                        self.socii_soldiers += 2000
-                        self.is_at_war_with.remove(ennemy)
+                        annexation_size = max(0,self.roman_war[ennemy]['occupied cities balance'])
 
-                        self.log(f"The roman republic won the war against {ennemy}. It annexes partially its territory")
+                        self.roman_republic_size += annexation_size
+                        self.socii_soldiers += 2000
+        
+                        self.roman_war.pop(ennemy)
+
+                        self.log(f"The roman republic won the war against {ennemy}. It annexes {annexation_size} occupied territories.")
                         self.log("The defeated neighbor will contributes 2000 soldiers to future campaigns.")
                         self.log(f"The socii contributes up to {self.socii_soldiers} soldiers.")
                         self.log(f"Size of the roman republic {self.roman_republic_size}.")
@@ -124,8 +134,8 @@ class Sim:
                     if self.country_info[ennemy]["army size"] == 0:
                         self.log(f"{ennemy} was destroyed by Rome.")
                         self.country_info.pop(ennemy)
-                        if ennemy in self.is_at_war_with:
-                            self.is_at_war_with.remove(ennemy)
+                        if ennemy in self.roman_war.keys():
+                            self.roman_war.pop(ennemy)
 
                         
                 else:
@@ -139,12 +149,22 @@ class Sim:
 
                     if attacker == ennemy:
                         self.log(f"{ennemy} besieges a city of Rome.")
+                        if randint(0,100) < 10:
+                            self.log(f"The siege is succesful.")
+                            self.roman_war[ennemy]["occupied cities balance"] -= 1
+                            self.log(f"The balance of occupied cities is {self.roman_war[ennemy]["occupied cities balance"]} in favor of Rome.")
+                        else:
+                            self.log(f"The siege is unsuccesful.")
 
                     if self.war_progression <= -100:
-                        self.roman_republic_size = max(self.roman_republic_size-4,0)
-                        self.is_at_war_with.remove(ennemy)
+                        
+                        annexation_size = max(0,self.roman_war[ennemy]['occupied cities balance'] * -1)
 
-                        self.log(f"The roman republic lost the war against {ennemy}. It loses some of its territory.")
+                        self.roman_republic_size = max(self.roman_republic_size-annexation_size,0)
+
+                        self.roman_war.pop(ennemy)
+
+                        self.log(f"The roman republic lost the war against {ennemy}. It loses {annexation_size} territories.")
                         
                         self.log("Size of the roman republic : "+str(self.roman_republic_size)+".")
                         self.incase_defeat()
@@ -168,24 +188,26 @@ class Sim:
                 self.log("The conditions of Rome improved. The senate is more prone to declare new wars.")
                 self.wariness_war = False
 
-            if len(self.is_at_war_with) == 0 and randint(0,100) < 30:
+            if len(self.roman_war) == 0 and randint(0,100) < 30:
                 self.log("The romans become more thirsty for war after this period of peace. The pro-war faction benefits.")
                 self.pro_war_influence = min(100,self.pro_war_influence + 5)
                 self.log("The pro-war faction have an influence of "+str(self.pro_war_influence)+"%.")
 
-            if self.wariness_war and len(self.is_at_war_with) > 0:
-                for ennemy in self.is_at_war_with:
+            if self.wariness_war and len(self.roman_war) > 0:
+                current_ennemies = copy.deepcopy(self.roman_war.keys())
+                for ennemy in current_ennemies:
                     self.log(f"The senate negotiates a peace with {ennemy}. It accept a peace in exchange of a tribute.")
-                    self.is_at_war_with.remove(ennemy)
+                    self.roman_war.pop(ennemy)
      
-            if randint(0,100) < 30 and len(self.is_at_war_with) == 0 and not self.wariness_war and len(self.country_info) > len(self.is_at_war_with):
+            if randint(0,100) < 30 and len(self.roman_war) == 0 and not self.wariness_war and len(self.country_info) > len(self.roman_war):
+                ennemies = self.roman_war.keys()
                 target = None
                 while target == None:
-                    x = choice(list(self.country_info.keys()))
-                    if x not in self.is_at_war_with:
+                    x = choice(list(self.country_info.keys()))                    
+                    if x not in ennemies:
                         target = x
                 self.log(f"A consul seek glory. The Roman republic declare war on {target}.")
-                self.is_at_war_with.append(target)
+                self.roman_war[target] = {"occupied cities balance":0}
                 self.war_progression = 0
             
             if randint(0,100) < 30:
