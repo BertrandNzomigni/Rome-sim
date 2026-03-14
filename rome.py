@@ -29,7 +29,7 @@ class Sim:
 
         # Senate
 
-        self.pro_war_influence = 40
+        self.pro_war_influence = 60
 
         # Diplomacy
 
@@ -64,9 +64,9 @@ class Sim:
                         neighbor_losses = (self.roman_soldiers+self.socii_soldiers) * 0.01
 
                         cumulative_roman_losses += roman_losses
-
-                        self.roman_soldiers -= int(roman_losses * self.roman_soldiers/(self.roman_soldiers+self.socii_soldiers))
-                        if self.socii_soldiers > 0:
+                        if self.roman_soldiers+self.socii_soldiers > 0: 
+                            self.roman_soldiers -= int(roman_losses * self.roman_soldiers/(self.roman_soldiers+self.socii_soldiers))
+                        if self.roman_soldiers+self.socii_soldiers > 0:
                             self.socii_soldiers -= int(roman_losses * self.socii_soldiers/(self.roman_soldiers+self.socii_soldiers))
                         neighbor_soldier -= neighbor_losses
 
@@ -87,15 +87,18 @@ class Sim:
                         if self.war_progression >= 100:
                             self.roman_republic_size += 4
                             self.socii_soldiers += 2000
+                            self.is_at_war_with.remove(ennemy)
+
                             self.log(f"The roman republic won the war against {ennemy}. It annexes partially its territory")
                             self.log("The defeated neighbor will contributes 2000 soldiers to future campaigns.")
                             self.log(f"The socii contributes up to {self.socii_soldiers} soldiers.")
-                            self.is_at_war = False
                             self.log(f"Size of the roman republic {self.roman_republic_size}.")
 
                             self.log("The senatorial pro-war faction ideas are applauded after this victory.")
                             self.pro_war_influence = min(100,self.pro_war_influence + 10)
                             self.log("The pro-war faction have an influence of "+str(self.pro_war_influence)+"%.")
+
+                            
                     else:
                         self.war_progression -= 25
                         self.log(f"The roman republic lost a battle against {ennemy}. The war stalls.")
@@ -107,12 +110,15 @@ class Sim:
 
                         if self.war_progression <= -100:
                             self.roman_republic_size = max(self.roman_republic_size-4,0)
+                            self.is_at_war_with.remove(ennemy)
+
                             self.log(f"The roman republic lost the war against {ennemy}. It loses some of its territory.")
+                            
                             self.log("Size of the roman republic : "+str(self.roman_republic_size)+".")
                             self.incase_defeat()
 
                             self.log("The senatorial anti-war faction ideas are more considered after this costly defeat.")
-                            self.pro_war_influence = max(min(100,self.pro_war_influence - 10),0)
+                            self.pro_war_influence = max(min(100,self.pro_war_influence - 20),0)
                             self.log("The pro-war faction have an influence of "+str(self.pro_war_influence)+"%.")
 
                 if self.roman_soldiers + self.socii_soldiers == 0:
