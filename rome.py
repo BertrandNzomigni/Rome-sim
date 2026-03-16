@@ -22,11 +22,11 @@ class Sim:
         self.is_at_war = False
         self.war_progression = 0
         self.roman_republic_exist = True
-        self.roman_soldiers = 3000
+        self.roman_soldiers = 1500
         self.socii_soldiers = 0
         self.wariness_war = False
 
-        self.default_battle_losses = 200
+        self.failed_a_siege = False
 
         # Senate
 
@@ -36,7 +36,7 @@ class Sim:
 
         self.roman_war = {"Etruscans":{"occupied cities balance":0}}
 
-        self.country_info = {"Etruscans" : {"army size":3000},"Samnites":{"army size":5000}}
+        self.country_info = {"Etruscans" : {"army size":3000,"Failed a siege":False},"Samnites":{"army size":5000,"Failed a siege":False}}
 
         # Interface
         self.output_this_year = False
@@ -50,18 +50,39 @@ class Sim:
     def log(self,text):
         logger.info("["+str(self.year)+" BC] " + text)
         self.output_this_year = True
+
+    def available_besiegers(self):
+        result = list()
+        for country in self.roman_war.keys():
+            if not self.country_info[country]["Failed a siege"]:
+                result.append(country)
+        return result
         
     def run(self):
         while self.year > self.beginning_year - self.duration and self.roman_republic_exist:
             
-            while randint(0,100) < 75 and self.roman_soldiers + self.socii_soldiers > 0 and len(self.roman_war.keys()) > 0:
-                ennemy = choice(list(self.roman_war.keys()))
+            siegers = self.available_besiegers()
+            while randint(0,100) < 75 and self.roman_soldiers + self.socii_soldiers > 0 and len(self.roman_war.keys()) > 0 and (len(siegers) > 0 or not self.failed_a_siege):
+                if not self.failed_a_siege and len(siegers) > 0:
+                    if randint(0,100) < 50:
+                        attacker = "Rome"
+                        ennemy = choice(list(self.roman_war.keys()))
+                        defender = ennemy
+                    else:
+                        attacker = choice(siegers)
+                        ennemy = attacker
+                        defender = "Rome"
+                elif not self.failed_a_siege:
+                    attacker = "Rome"
+                    ennemy = choice(list(self.roman_war.keys()))
+                    defender = ennemy
+                else:
+                    attacker = choice(siegers)
+                    ennemy = attacker
+                    defender = "Rome"
+
                 self.log(f"{self.roman_soldiers} romans soldiers and {self.socii_soldiers} socii soldiers faces {self.country_info[ennemy]["army size"]} soldiers from {ennemy}")
 
-
-                i = randint(0,1)
-                attacker = ["Rome",ennemy][i]
-                defender = ["Rome",ennemy][i-1]
                 self.log(f"{attacker} is the attacker.")
 
                 ## Battle
@@ -111,6 +132,7 @@ class Sim:
                             self.log(f"The balance of occupied cities is {self.roman_war[ennemy]["occupied cities balance"]} in favor of Rome.")
                         else:
                             self.log(f"The siege is unsuccesful.")
+                            self.failed_a_siege = True
 
                     self.log("The roman army lost "+str(cumulative_roman_losses)+" soldiers in this battle.")
 
@@ -155,6 +177,7 @@ class Sim:
                             self.log(f"The balance of occupied cities is {self.roman_war[ennemy]["occupied cities balance"]} in favor of Rome.")
                         else:
                             self.log(f"The siege is unsuccesful.")
+                            self.country_info[ennemy]["Failed a siege"] = True
 
                     if self.war_progression <= -100:
                         
@@ -172,6 +195,13 @@ class Sim:
                         self.log("The senatorial anti-war faction ideas are more considered after this costly defeat.")
                         self.pro_war_influence = max(min(100,self.pro_war_influence - 20),0)
                         self.log("The pro-war faction have an influence of "+str(self.pro_war_influence)+"%.")
+
+                siegers = self.available_besiegers()
+
+
+            self.failed_a_siege = False
+            for country in self.country_info.keys():
+                self.country_info[country]["Failed a siege"] = False
 
             if self.roman_soldiers + self.socii_soldiers == 0:
                 self.log(f"The {ennemy} profits from the devasted roman army and destroy Rome.")
@@ -194,7 +224,7 @@ class Sim:
                 self.log("The pro-war faction have an influence of "+str(self.pro_war_influence)+"%.")
 
             if self.wariness_war and len(self.roman_war) > 0:
-                current_ennemies = copy.deepcopy(self.roman_war.keys())
+                current_ennemies = copy.deepcopy(list(self.roman_war.keys()))
                 for ennemy in current_ennemies:
                     self.log(f"The senate negotiates a peace with {ennemy}. It accept a peace in exchange of a tribute.")
                     self.roman_war.pop(ennemy)

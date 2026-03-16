@@ -23,5 +23,6 @@
 - Les samnites ont un avantage défensif lorsqu'ils sont attaqués. (Fait)
 - Il peut avoir plusieurs batailles par année. (Fait)
 - Si une armée offensive gagne une bataille, elle peut tenter un siège. (Fait)
-- Les territoires peuvent êre conquis seulement suite à des sièges.
-    - Les sièges réussis occupent des territoires ou les libérent.
+- Les territoires peuvent êre conquis seulement suite à des sièges. (Fait)
+    - Les sièges réussis occupent des territoires ou les libérent. (Fait)
+- Un attaquant ne peut attaquer après avoir échoué un siège. (Fait)
