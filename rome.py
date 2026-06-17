@@ -20,9 +20,8 @@ class Sim:
         self.duration = 50
         self.roman_republic_size = 5
         self.is_at_war = False
-        self.war_progression = 0
         self.roman_republic_exist = True
-        self.roman_soldiers = 1500
+        self.roman_soldiers = 4000
         self.socii_soldiers = 0
         self.wariness_war = False
 
@@ -34,7 +33,7 @@ class Sim:
 
         # Diplomacy
 
-        self.roman_war = {"Etruscans":{"occupied cities balance":0}}
+        self.roman_war = {"Etruscans":{"occupied cities balance":0,"War progression":0}}
 
         self.country_info = {"Etruscans" : {"army size":3000,"Failed a siege":False},"Samnites":{"army size":5000,"Failed a siege":False}}
 
@@ -99,7 +98,7 @@ class Sim:
                     ennemy_damage_bonus += 25
                     self.log(f"The Samnites are proficient at combat in the hills. They exploit this defensive advantage. (25% damage bonus)")
 
-                while roman_morale > 0 and neighbor_morale > 0:
+                while roman_morale > 0 and neighbor_morale > 0 and self.roman_soldiers+self.socii_soldiers > 0 and neighbor_soldier > 0:
                     roman_losses = int(min(neighbor_soldier * 0.01 * (1 + ennemy_damage_bonus/100),self.roman_soldiers+self.socii_soldiers))
                     neighbor_losses = int(min((self.roman_soldiers+self.socii_soldiers) * 0.01,neighbor_soldier))
 
@@ -118,7 +117,7 @@ class Sim:
                 self.country_info[ennemy]["army size"] = neighbor_soldier
 
                 if neighbor_morale <= 0:
-                    self.war_progression += 25
+                    self.roman_war[ennemy]["War progression"] += 25
                     self.log(f"The roman republic won a battle against {ennemy}. The war advances.")
                     self.log("After this battle, the senatorial pro-war faction gain influence at the expanse of the anti-war faction.")
                     self.pro_war_influence = min(100,self.pro_war_influence + 5)
@@ -136,7 +135,7 @@ class Sim:
 
                     self.log("The roman army lost "+str(cumulative_roman_losses)+" soldiers in this battle.")
 
-                    if self.war_progression >= 100:
+                    if self.roman_war[ennemy]["War progression"] >= 100:
                         annexation_size = max(0,self.roman_war[ennemy]['occupied cities balance'])
 
                         self.roman_republic_size += annexation_size
@@ -161,7 +160,7 @@ class Sim:
 
                         
                 else:
-                    self.war_progression -= 25
+                    self.roman_war[ennemy]["War progression"] -= 25
                     self.log(f"The roman republic lost a battle against {ennemy}. The war stalls.")
                     self.log("After this battle, the senatorial anti-war faction gain influence at the expanse of the pro-war faction.")
                     self.pro_war_influence = min(100,self.pro_war_influence - 5)
@@ -179,7 +178,7 @@ class Sim:
                             self.log(f"The siege is unsuccesful.")
                             self.country_info[ennemy]["Failed a siege"] = True
 
-                    if self.war_progression <= -100:
+                    if self.roman_war[ennemy]["War progression"] <= -100:
                         
                         annexation_size = max(0,self.roman_war[ennemy]['occupied cities balance'] * -1)
 
@@ -237,8 +236,7 @@ class Sim:
                     if x not in ennemies:
                         target = x
                 self.log(f"A consul seek glory. The Roman republic declare war on {target}.")
-                self.roman_war[target] = {"occupied cities balance":0}
-                self.war_progression = 0
+                self.roman_war[target] = {"occupied cities balance":0,"War progression":0}
             
             if randint(0,100) < 30:
                 self.log("200 new citizens of Rome are ready for war.")

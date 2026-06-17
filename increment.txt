@@ -26,3 +26,5 @@
 - Les territoires peuvent êre conquis seulement suite à des sièges. (Fait)
     - Les sièges réussis occupent des territoires ou les libérent. (Fait)
 - Un attaquant ne peut attaquer après avoir échoué un siège. (Fait)
+- La progression des guerres est mesuré pour chaque adversaire de Rome. (Fait)
+- La géographie de l'Italie est modélisée.

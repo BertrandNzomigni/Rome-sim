@@ -1,0 +1,4 @@
+Etape 1 : Créer un environnement virtuel Python
+    Etape 1.1 : 
+Etape 2 : Importer PIL dans cet environnement virtuel
+
